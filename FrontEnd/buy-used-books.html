@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buy New Books | Books Bazaar</title>
+  <link rel="stylesheet" href="Buy-used-books.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="home.html" class="logo">📚 Books Bazaar</a>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="home.html#shop">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="buy-used-books.html" class="active">Buy/Sell Used Books</a></li>
+      </ul>
+
+      <form id="navSearchForm" class="search-bar">
+        <input type="text" id="navSearchInput" placeholder="Search anything..." autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+
+
+      <button id="openCartBtn" class="cart-toggle-btn">🛒 Cart</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Filters Sidebar -->
+    <aside class="filters">
+      <h2>Filter Books</h2>
+
+      <section class="filter-section">
+        <h3>Price Range</h3>
+        <label>
+          Min: ₹<input type="number" id="priceMin" value="0" min="0" />
+        </label>
+        <label>
+          Max: ₹<input type="number" id="priceMax" value="1000" min="0" />
+        </label>
+      </section>
+
+      <section class="filter-section">
+        <h3>Genre</h3>
+        <label><input type="checkbox" class="genre" value="Fiction" /> Fiction</label>
+        <label><input type="checkbox" class="genre" value="Non-fiction" /> Non-fiction</label>
+        <label><input type="checkbox" class="genre" value="Sci-Fi" /> Sci-Fi</label>
+        <label><input type="checkbox" class="genre" value="Romance" /> Romance</label>
+      </section>
+
+      <section class="filter-section">
+        <h3>Rating</h3>
+        <label><input type="radio" name="rating" value="4" /> 4 stars & up</label>
+        <label><input type="radio" name="rating" value="3" /> 3 stars & up</label>
+        <label><input type="radio" name="rating" value="2" /> 2 stars & up</label>
+        <label><input type="radio" name="rating" value="" checked /> Any rating</label>
+      </section>
+
+      <button id="clearFilters">Clear Filters</button>
+    </aside>
+
+    <section id="booksScrollArea">
+      <!-- Books Display -->
+      <section class="books-section" id="booksSection">
+        <!-- Book cards will be inserted here dynamically -->
+      </section>
+    </section>
+  </div>
+  <!-- Cart Sidebar -->
+  <aside id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="closeCartBtn" aria-label="Close cart sidebar">✖️</button>
+    </div>
+    <div id="cartItemsContainer" class="cart-items">
+      <p>Your cart is empty.</p>
+    </div>
+
+    <div id="cartTotal" class="cart-total">Total: ₹0</div>
+    <button id="buyNowAllBtn" class="buy-all-btn">Buy Now</button>
+
+    <!-- Removed openCartBtn from here -->
+  </aside>
+
+  <script src="buy-used-books.js"></script>
+</body>
+
+</html>

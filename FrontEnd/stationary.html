@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stationary | Books Bazaar</title>
+  <link rel="stylesheet" href="stationary.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="home.html" class="logo">📚 Books Bazaar</a>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="home.html#shop">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="stationary.html" class="active">Stationary</a></li>
+      </ul>
+
+      <form id="navSearchForm" class="search-bar">
+        <input type="text" id="navSearchInput" placeholder="Search anything..." autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+
+      
+      <button id="openCartBtn" class="cart-toggle-btn">🛒 Cart</button>
+
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <aside class="filters">
+      <h2>Filter Stationary</h2>
+      <section>
+        <label>Min Price: ₹<input type="number" id="priceMin" /></label>
+        <label>Max Price: ₹<input type="number" id="priceMax" /></label>
+      </section>
+      <section>
+        <h3>Category</h3>
+        <label><input type="checkbox" class="category" value="Pens" /> Pens</label>
+        <label><input type="checkbox" class="category" value="Notebooks" /> Notebooks</label>
+        <label><input type="checkbox" class="category" value="Art Supplies" /> Art Supplies</label>
+      </section>
+      <section>
+        <h3>Rating</h3>
+        <label><input type="radio" name="rating" value="4" /> 4 & up</label>
+        <label><input type="radio" name="rating" value="3" /> 3 & up</label>
+        <label><input type="radio" name="rating" value="2" /> 2 & up</label>
+        <label><input type="radio" name="rating" value="" checked /> Any</label>
+      </section>
+      <button id="clearFilters">Clear Filters</button>
+    </aside>
+
+    <section id="stationaryItemsSection"></section>
+  </div>
+  <div id="cartSidebar" class="cart-sidebar">
+    <button id="closeCartBtn">Close</button>
+    <h3>Your Cart</h3>
+    <div id="cartItemsContainer"></div>
+    <p id="cartTotal">Total: ₹0</p>
+    <button id="buyNowAllBtn">Buy All</button>
+  </div>
+  <!-- <button id="openCartBtn">🛒 <span id="cartCount">0</span></button> -->
+
+
+  <script src="stationary.js"></script>
+</body>
+
+</html>
